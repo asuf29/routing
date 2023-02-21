@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Users from "./components/Users";
+import User from "./components/User";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Switch>
           <Route path="/about" component={About} />
           <Route path="/users" component={Users} />
+          <Route path="/user" component={User} />
           <Route path="/" component={Home} />
         </Switch>
       </div>
