@@ -1,6 +1,9 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Users() {
+  const [users, setUsers] = useState([]);
   return (
     <div>
       <h1>Users</h1>
