@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export default function Users() {
   return (
     <div>
+      <h1>Users</h1>
       <ul>
         <li>
           <Link to="/user/1">User 1</Link>
