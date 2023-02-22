@@ -40,6 +40,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/users" component={Users} />
           <Route path="/user" component={User} />
+          <Route path="/*" component={Error404} />
           <Route path="/" component={Home} />
         </Switch>
       </div>
