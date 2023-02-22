@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 export default function User() {
   const [loading, setLoading] = useState(true);
@@ -19,7 +19,12 @@ export default function User() {
     <div>
       <h1>User Details</h1>
       {loading && <div>Loading...</div>}
-      <code>{JSON.stringify(user)}</code>
+      {!loading && <code>{JSON.stringify(user)}</code>}
+      <br />
+      <br />
+      <Link to={`/user/${parseInt(id) + 1}`}>
+        Next User({parseInt(id) + 1})
+      </Link>
     </div>
   );
 }
