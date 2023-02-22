@@ -1,8 +1,14 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Users from "./components/Users";
+import User from "./components/User";
 
 function App() {
   return (
@@ -11,13 +17,19 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/" exact activeClassName="active">
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink to="/about" activeClassName="active">
+                About
+              </NavLink>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <NavLink to="/users" activeClassName="active">
+                Users
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -27,6 +39,7 @@ function App() {
         <Switch>
           <Route path="/about" component={About} />
           <Route path="/users" component={Users} />
+          <Route path="/user" component={User} />
           <Route path="/" component={Home} />
         </Switch>
       </div>
